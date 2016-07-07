@@ -1,0 +1,283 @@
+#wrap_player{
+	color: #FFF;
+	position: fixed;
+	top: 102px; bottom: 0;
+	left: 0;
+}
+
+div.jp-audio{
+	width: 250px;
+	padding: 0 0 15px;
+	position: absolute;
+	top: 0; bottom: 0;
+}
+
+div.jp-audio div.jp-jplayer{
+	display: block;
+	text-align: center;
+	padding: 10px; margin-bottom: 15px;
+	max-height: 230px;
+	background-color: #FFF;
+}
+
+div.jp-audio ul li{
+	list-style: none;
+	display: inline-block;
+}
+
+div.jp-audio ul.jp-controls{
+	display: block;
+	margin: 0 auto 25px; padding: 0;
+	text-align: center;
+}
+
+/* Control de la lecture */
+div.jp-audio ul.jp-controls.controls-play{
+	position: absolute;
+	top: 130px;
+	width: 100%;
+	padding: 10px 0;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+div.jp-audio ul.jp-controls.controls-play li a{
+	display: inline-block;
+	font-size: 40px;
+	text-align: center;
+	color: #FFF;
+}
+
+div.jp-audio ul.jp-controls.controls-play li a.jp-play:hover,
+div.jp-audio ul.jp-controls.controls-play li a.jp-play:focus{
+	color: #2ecc71;
+}
+
+div.jp-audio ul.jp-controls.controls-play li a.jp-pause:hover,
+div.jp-audio ul.jp-controls.controls-play li a.jp-pause:focus{
+	color: #e67e22;
+}
+
+div.jp-audio ul.jp-controls.controls-play li a.jp-stop:hover,
+div.jp-audio ul.jp-controls.controls-play li a.jp-stop:focus{
+	color: #e74c3c;
+}
+
+div.jp-audio ul.jp-controls.controls-play div.jp-play-options li{
+	display: inline-block;
+	margin: 6px 0;
+}
+
+div.jp-audio ul.jp-controls.controls-play div.jp-play-options li a{
+	font-size: 14px;
+}
+
+div.jp-audio ul.jp-controls.controls-play div.jp-play-options li a:hover,
+div.jp-audio ul.jp-controls.controls-play div.jp-play-options li a:focus{
+	color: #AAA;
+}
+
+div.jp-audio ul.jp-controls.controls-play div.jp-play-options li a.jp-repeat-off,
+div.jp-audio ul.jp-controls.controls-play div.jp-play-options li a.jp-shuffle-off{
+	color: #e74c3c;
+}
+
+div.jp-audio ul.jp-controls.controls-play div.jp-play-options li a.jp-repeat-off:hover,
+div.jp-audio ul.jp-controls.controls-play div.jp-play-options li a.jp-shuffle-off:hover,
+div.jp-audio ul.jp-controls.controls-play div.jp-play-options li a.jp-repeat-off:focus,
+div.jp-audio ul.jp-controls.controls-play div.jp-play-options li a.jp-shuffle-off:focus{
+	color: #FF8578;
+}
+
+
+/* Control du volume */
+div.jp-audio ul.jp-controls.controls-volume{
+	position: relative;
+	width: 250px;
+}
+
+div.jp-audio ul.jp-controls.controls-volume li a{
+	display: inline-block;
+	font-size: 18px;
+}
+
+div.jp-audio ul.jp-controls.controls-volume li a:hover,
+div.jp-audio ul.jp-controls.controls-volume li a:focus{
+	color: #e67e22;
+}
+
+div.jp-audio ul.jp-controls.controls-volume li a.jp-mute,
+div.jp-audio ul.jp-controls.controls-volume li a.jp-unmute{
+	position: absolute;
+	left: 15px; top: 0px;
+}
+
+div.jp-audio ul.jp-controls.controls-volume li a.jp-volume-max{
+	position: absolute;
+	right: 15px; top: 0px;
+}
+
+div.jp-audio div.jp-volume-bar{
+	position: absolute;
+	left: 45px; right: 45px;
+	top: 3px;
+	z-index: 1000;
+	height: 15px;
+	background-color: rgba(255, 255, 255, 0.3);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+div.jp-audio div.jp-volume-bar div.jp-volume-bar-value{
+	background-color: #e67e22;
+	height: 15px;
+	box-shadow: 1px 0 3px #000;
+}
+
+
+/* Control de la timeline */
+div.jp-audio div.jp-timeline{
+	cursor: default;
+	position: fixed;
+	bottom: 0; left: 0; right: 0;
+	z-index: 2000;
+	background-color: #222;
+	height: 25px;
+}
+
+div.jp-audio div.jp-timeline div.jp-progress{
+	position: absolute;
+	left: 45px; right: 45px;
+	height: inherit;
+	background-color: rgba(255, 255, 255, 0.3);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+div.jp-audio div.jp-timeline div.jp-progress div.jp-seek-bar{
+	background-color: rgba(255, 255, 255, 0.3);
+	height: inherit;
+	cursor: pointer;
+}
+
+div.jp-audio div.jp-timeline div.jp-progress div.jp-seek-bar div.jp-play-bar{
+	background-color: #3498db;
+	height: inherit;
+}
+
+div.jp-audio div.jp-timeline div.jp-timer{
+	height: inherit;
+	line-height: 25px;
+}
+
+div.jp-audio div.jp-timeline div.jp-current-time{
+	position: absolute;
+	top: 0; left: 8px;
+}
+
+div.jp-audio div.jp-timeline div.jp-duration{
+	position: absolute;
+	top: 0; right: 8px;
+}
+
+
+
+div.jp-audio div.jp-track-title{
+	display: none;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 15px;
+	left: 0; right: 0;
+	font-size: 18px;
+	padding: 5px;
+}
+
+div.jp-audio div.jp-track-title span{
+	display: inline-block;
+	font-size: 12px;
+	font-style: italic;
+	color: #BBB;
+}
+
+
+
+
+/* Control de la playlist */
+div.jp-audio div.jp-playlist-container h3{
+	display: block;
+	margin: 0; padding: 3px 5px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+div.jp-audio div.jp-playlist-container h3 a{
+	display: inline-block;
+	margin: 50px 0 0 -10px;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+div.jp-audio div.jp-playlist{
+	background-color: #111;
+	overflow: auto;
+	width: inherit; height: 224px;
+	overflow: scroll-x;
+}
+
+div.jp-audio div.jp-playlist ul{
+	margin: 0; padding: 0;
+}
+
+div.jp-audio div.jp-playlist ul li{
+	display: block;
+	margin: 0; padding:2px 5px;
+	padding-right: 25px;
+	position: relative;
+}
+
+div.jp-audio div.jp-playlist ul li:nth-child(odd){
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+div.jp-audio div.jp-playlist ul li.jp-playlist-current{
+	background-color: rgba(46, 204, 113, 0.5);
+}
+
+div.jp-audio div.jp-playlist ul li:hover,
+div.jp-audio div.jp-playlist ul li:focus{
+	background-color: rgba(46, 204, 113, 0.3);
+}
+
+div.jp-audio div.jp-playlist ul li div a.jp-playlist-item-remove{
+	display: inline-block;
+	position: absolute;
+	right: 5px;
+	font-size: 22px;
+}
+
+div.jp-audio div.jp-playlist ul li div a.jp-playlist-item{
+	display: inline-block;
+}
+
+div.jp-audio div.jp-playlist ul li div a.jp-playlist-item span.jp-artist{
+	display: block;
+	color: #AAA;
+	font-style: italic;
+}
+
+
+@media screen and (max-height: 600px) {
+	div.jp-audio div.jp-jplayer,
+	div.jp-audio div.jp-player img{
+		height: 150px!important;
+	}
+
+	div.jp-audio div.jp-track-title{
+		position: static;
+	}
+}
+
+@media screen and (max-height: 500px) {
+	div.jp-audio div.jp-jplayer{
+		display: none;
+	}
+}

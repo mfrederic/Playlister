@@ -1,0 +1,1087 @@
+body{ 
+	margin: 0; padding: 0;
+	color: #222; font-size: 11px;
+	font-family: arial, verdana, sans-sherif;
+	background-image: url(../images/bg-loud.jpg);
+	padding: 100px 0 0;
+	min-width: 960px;
+}
+
+a{
+	text-decoration: none;
+	color: #FFF;
+}
+
+button, input[type=checkbox], label{
+	cursor: pointer;
+}
+
+input, button{
+	border: 1px solid transparent;
+}
+
+input[type=text],
+input[type=password],
+input[type=submit],
+button {
+	display: inline-block;
+	margin: 0; padding: 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 3px;
+}
+
+input[type=submit], button {
+	margin: 10px;
+}
+
+input.large{
+	min-width: 300px;
+}
+
+input.error{
+	border: 1px solid #e74c3c;
+}
+
+
+.clear{
+	display: block!important;
+	clear: both!important;
+	width: 0!important; height: 0!important;
+	margin: 0!important; padding: 0!important;
+}
+
+.rotate {
+    margin: 0;
+    padding: 0;
+    -webkit-transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+}
+
+.black_light{
+	display: none;
+	position: absolute;
+	z-index: 1995;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.black_light.inversed{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.warning{
+	font-weight: bold;
+	color: #F80;
+	text-shadow: 0 1px 1px #000;
+}
+
+
+
+/* MENU */
+
+#menu{
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	width: 100%; height: 100px;
+	background-color: #111;
+	border-bottom: 1px solid #666;
+	box-shadow: 0 1px 0 #111;
+}
+
+#menu ul{
+	margin: 0; padding: 15px;
+	height: 70px;
+	text-align: center;
+}
+
+#menu ul li{
+	display: inline-block;
+	list-style: none;
+}
+
+#menu ul li a{
+	display: inline-block;
+	height: 70px;
+	margin: 0 2px; padding: 0 10px;
+	font-size: 18px;
+	color: #FFF;
+	line-height: 70px;
+}
+
+#menu ul li a.logout{
+	background-color: #f39c12;
+}
+
+#menu ul li a.active{
+	background-color: #e74c3c;
+}
+
+#menu ul li a:hover,
+#menu ul li a:focus{
+	background-color: #c0392b;
+}
+
+
+
+/* Contenu */
+#wrap_content{
+	position: fixed;
+	z-index: 990;
+	bottom: 0; top: 100px;
+	left: 250px; right: 0;
+	margin: 15px; padding: 15px;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #FFF;
+	overflow: auto;
+}
+
+#wrap_content .wrap{
+	margin: 0 auto 25px;
+}
+
+#wrap_content .wrap.half-content{
+	width: 47%;
+	margin: 0 10px;
+	overflow: auto;
+	float: left;
+}
+
+#wrap_content .wrap h3{
+	margin: 5px 0 15px;
+	padding: 5px 15px;
+	font-size: 18px;
+	border-bottom: 1px solid #FFF;
+}
+
+#wrap_content .wrap-playlists .playlists .a-playlist{
+	display: inline-block;
+	margin: 0 10px 10px;
+	height: 180px; width: 150px;
+}
+
+#wrap_content .wrap-playlists .playlists .style{
+	position: relative;
+	display: inline-block;
+	margin: 0 0 10px;
+	height: 150px; width: 150px;
+	background-color: #222;
+	text-align: center;
+	overflow: hidden;
+}
+
+#wrap_content .wrap-playlists .playlists .style p{
+	display: none;
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	margin: 0; padding: 50px 0;
+	text-align: center;
+	z-index: 1010;
+	background-color: rgba(0, 0, 0, 0.7);
+	font-size: 48px;
+	vertical-align: middle;
+	text-shadow: 0 0 10px #f1c40f;
+}
+
+#wrap_content .wrap-playlists .playlists .style:hover p,
+#wrap_content .wrap-playlists .playlists .style:focus p{
+	display: block;
+}
+
+#wrap_content .wrap-playlists .playlists .style img{
+	position: absolute;
+	top: 0; left: 0;
+	z-index: 1000;
+}
+
+#wrap_content .wrap-playlists .playlists .style span{
+	position: absolute;
+	bottom: 10px;
+	left: 0; right: 0;
+	z-index: 1005;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 5px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#wrap_content .wrap-playlists .playlists .style i{
+	position: absolute;
+	z-index: 1000;
+	text-align: center;
+	left: 0; right: 0;
+	text-shadow: 0 0 1px #000;
+}
+
+#wrap_content .wrap-playlists .playlists .style b{
+	display: none;
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	margin: 0; padding: 15px 0;
+	text-align: center;
+	z-index: 1010;
+	background-color: rgba(0, 0, 0, 0.8);
+	font-size: 90px;
+	text-shadow: 0 0 10px #f1c40f;
+}
+
+#wrap_content .wrap-playlists .playlists .style b span{
+	font-size: 14px;
+}
+
+#wrap_content .wrap-playlists .playlists .a-playlist div{
+	width: 140px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#wrap_content .wrap-playlists .playlists .a-playlist div a{
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 5px; 
+	margin: 0 5px;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	border-radius: 3px;
+}
+
+#wrap_content .wrap-playlists .playlists .a-playlist div a:hover,
+#wrap_content .wrap-playlists .playlists .a-playlist div a:focus{
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #000;
+}
+
+
+/* ADD playlist */
+#add_to_playlist{
+	position: fixed;
+	top: 100px; bottom: 0;
+	right: -302px;
+	width: 300px;
+	background: #111;
+	border-left: 2px solid #FFF;
+}
+
+#add_to_playlist h3{
+	padding: 10px; margin: 0 0 10px;
+	border-bottom: 1px solid #FFF;
+}
+
+#add_to_playlist h3 a{
+	float: right;
+	font-size: 18px;
+}
+
+#add_to_playlist .playlists{
+	padding: 5px;
+	max-height: 250px;
+	overflow: auto;
+}
+
+#add_to_playlist .playlists div{
+	display: block;
+	margin: 2px auto; padding: 0;
+	height: 50px;
+	background: #222;
+	border-radius: 0 20px 20px 0;
+	overflow: hidden;
+}
+
+#add_to_playlist .playlists div:hover,
+#add_to_playlist .playlists div:focus{
+	background-color: #2ecc71;
+	color: #000;
+}
+
+#add_to_playlist .playlists div label{
+	display: block;
+	height: 50px;
+	cursor: pointer;
+}
+
+#add_to_playlist .playlists div label *{
+	display: inline-block;
+	height: 50px;
+	vertical-align: middle;
+	line-height: 50px;
+}
+
+#add_to_playlist .playlists div label span.playlist-name{
+	font-size: 14px;
+	padding: 0 5px;
+}
+
+#add_to_playlist .playlists div label input{
+	display: none;
+}
+
+#add_to_playlist .playlists div label span.checked{
+	display: none;
+	background-color: #333;
+	float: right;
+	padding: 0 10px;
+	color: #2ecc71;
+	border-left: 2px solid #111;
+}
+
+#add_to_playlist .playlists div.checked{
+
+}
+
+#add_to_playlist .playlists div.checked label span.checked{
+	display: inline-block;
+}
+
+
+
+/* tableau */
+.table{
+	padding: 0; margin: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.table thead tr th{
+	color: #FFF;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 5px 10px;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.table tr td{
+	color: #FFF;
+	padding: 3px 10px;
+	font-size: 12px;
+}
+
+.table tr td a:hover,
+.table tr td a:focus{
+	color: #e74c3c;
+}
+
+.table tr.odd{
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.msg-wrap{
+	display: block;
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1500;
+}
+
+.msg-container{
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0; right: 0;
+	min-height: 50px;
+	max-width: 550px;
+	background-color: #222;
+	color: #FFF;
+	z-index: 1505;
+	border-bottom: 4px solid #FFF;
+	text-align: center;
+}
+
+.msg-content{
+	display: inline-block;
+	text-align: left;
+	width: 60%;
+	padding: 10px;
+	font-size: 14px;
+	line-height: 18px;
+	float: left;
+}
+
+.msg-close{
+	float: right;
+	display: inline-block;
+	font-size: 40px;
+}
+
+
+.form,
+.form-inline{
+	display: block;
+	margin: 0 auto; padding-bottom: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	max-width: 400px;
+	color: #FFF;
+	text-align: center;
+}
+
+.form-inline{
+	max-width: 600px; padding: 0;
+	text-align: left;
+}
+
+.form h3,
+.form-inline h3{
+	text-align: left;
+	background-color: #e74c3c;
+	display: block;
+	font-size: 18px;
+	margin: 0 0 15px; padding: 10px;
+	border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-inline h3{
+	float: left;
+	display: inline-block;
+	margin: 0 15px 0 0;
+	border-right: 4px solid rgba(255, 255, 255, 0.3);
+	border-bottom: none;
+}
+
+.form div{
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+.form-inline div{
+	margin-right: 10px;
+	padding: 5px;
+}
+
+.form div label,
+.form-inline div label{
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	width: 100px;
+	color: #e74c3c;
+	font-weight: bold;
+	text-align: left;
+}
+
+.form div input,
+.form-inline div input{
+	display: inline-block;
+	margin: 0; padding: 5px;
+	color: #FFF;
+	font-size: 16px;
+	background-color: #e74c3c;
+	border: none;
+	border-radius: 3px;
+}
+
+div input[type=submit],
+div input[type=reset] {
+	cursor: pointer;
+}
+
+.form div input:hover,
+.form div input:focus,
+.form-inline div input:hover,
+.form-inline div input:focus{
+	background-color: #c0392b;
+}
+
+
+#wrap_asking{
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	padding: 15px 0;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 1600;
+	text-align: center;
+}
+
+#wrap_asking h3{
+	width: 350px;
+	background-color: #FFF;
+	margin: 0 auto; padding: 10px;
+	font-size: 14px;
+	border-bottom: 4px solid #222;
+	text-shadow: none;
+}
+
+#wrap_asking.success h3{
+	color: #27ae60;
+	border-color: #27ae60;
+}
+
+#wrap_asking.warning h3{
+	color: #d35400;
+	border-color: #d35400;
+}
+
+#wrap_asking.error h3{
+	color: #c0392b;
+	border-color: #c0392b;
+}
+
+#wrap_asking div.asking{
+	width: 350px;
+	background-color: #FFF;
+	margin: 0 auto; padding: 10px;
+	font-size: 12px;
+	border-bottom: 1px solid #222;
+	text-shadow: none;
+}
+
+#wrap_asking.success div.asking{
+	color: #27ae60;
+}
+
+#wrap_asking.warning div.asking{
+	color: #d35400;
+}
+
+#wrap_asking.error div.asking{
+	color: #c0392b;
+}
+
+#wrap_asking div.answer{
+	width: 350px;
+	background-color: #FFF;
+	margin: 0 auto; padding: 0 10px;
+	font-size: 12px;
+	border-bottom: 1px solid #222;
+}
+
+#wrap_asking div.answer button{
+	display: inline-block;
+	background-color: #DDD;
+	margin: 0 auto; width: 150px;
+	border-radius: 0;
+}
+
+#wrap_asking div.answer button:hover,
+#wrap_asking div.answer button:focus{
+	background-color: #3498db;
+}
+
+
+#wrap_loader{
+	display: none;
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	padding: 15px 0;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 1600;
+	text-align: center;
+}
+
+#wrap_loader h3{
+	font-size: 26px;
+	color: #FFF;
+}
+
+
+.dataTables_length,
+.dataTables_filter,
+.dataTables_info,
+.dataTables_paginate{
+	display: inline-block;
+	margin-right: 35px;
+}
+
+.dataTables_length label,
+.dataTables_filter label{
+	cursor: pointer;
+}
+
+.dataTables_length select,
+.dataTables_filter input{
+	display: inline-block;
+	margin: 0 3px; padding: 3px;
+	background-color: #E74C3C;
+	border: none;
+	border-radius: 3px;
+	color: #FFF;
+}
+
+.dataTables_paginate .paginate_button{
+	font-size: 14px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 3px; padding: 3px;
+	border-radius: 3px;
+}
+
+.dataTables_paginate .paginate_button.current{
+	background-color: #FFF;
+	color: #000;
+}
+
+.dataTables_paginate .paginate_button:hover,
+.dataTables_paginate .paginate_button:focus{
+	background-color: #E74C3C;
+	color: #FFF;
+}
+
+.dataTable{
+	margin: 5px 0 15px;
+}
+
+.dataTable thead th{
+	cursor: pointer;
+}
+
+
+#alerter_wrap{
+	display: none;
+	position: absolute;
+	z-index: 1995;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#alerter{
+	position: relative;
+	margin: 50px auto 0;
+	background: #FFF;
+	z-index: 2000;
+	width: 300px;
+	border: 8px solid #d35400;
+	border-radius: 5px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+#alerter .alerter-title{
+	width: 300px;
+	border-bottom: 2px solid #e67e22;
+}
+
+#alerter .alerter-title h3{
+	margin: 0; padding: 5px 10px;
+	font-size: 18px;
+	color: #d35400;
+}
+
+#alerter .alerter-content{
+	padding: 10px;
+	width: 280px;
+	border-bottom: 2px solid #e67e22;
+	font-size: 12px;
+}
+
+#alerter .alerter-options{
+	padding: 10px;
+	width: 280px;
+}
+
+#alerter .alerter-options button{
+	display: inline-block;
+	margin: 0 auto;
+	background: #FFF;
+	border-radius: 3px;
+	border: 2px solid #e67e22;
+}
+
+#alerter .alerter-options button:hover,
+#alerter .alerter-options button:focus{
+	border-color: #d35400;
+	color: #d35400;
+}
+
+
+.update_poster{
+	display: block;
+	background: #222;
+	margin: 25px auto 0;
+	width: 450px;
+	border-radius: 3px;
+}
+
+.update_poster h3{
+	margin: 0!important;
+}
+
+.update_poster div{
+	padding: 10px;
+	border-bottom: 1px solid #FFF;
+}
+
+.update_poster div input,
+.update_poster div button{
+	margin: 0 5px;
+}
+
+.poster-update{
+	position: relative;
+	display: inline-block;
+	height: 50px; width: 50px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.poster-update span{
+	display: none;
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+}
+
+.poster-update:hover span{
+	display: inline-block;
+}
+
+
+#wrap_update_playlist .wraper-playlist{
+	margin: 20px auto; padding: 10px;
+	width: 550px;
+	background-color: #111;
+	border: 2px solid #FFF;
+}
+
+#wrap_update_playlist h3{
+	border-bottom: 1px solid #FFF;
+	text-align: center;
+}
+
+#wrap_update_playlist form{
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#wrap_update_playlist form .block-left,
+#wrap_update_playlist form .block-right{
+	display: inline-block;
+	margin: 0 auto;
+}
+
+#wrap_update_playlist form .block-left div{
+	height: 150px; width: 150px;
+	overflow: hidden;
+	border: 4px solid #2980b9;
+}
+
+h3 .size_limit{
+	position: relative;
+	float: right;
+	display: inline-block;
+	background-color: #222;
+	height: 15px; width: 150px;
+	border: 1px solid #444;
+	font-size: 10px;
+	overflow: hidden;
+}
+
+h3 .size_limit b.current{
+	text-align: center;
+	display: inline-block;
+	height: 15px; width: 150px;
+	background-color: #e74c3c;
+}
+
+h3 .size_limit b.text{
+	position: absolute;
+	top: 0; left: 0;
+	text-align: center;
+	display: inline-block;
+	height: 15px; width: 150px;
+}
+
+h3 span.right{
+	float: right;
+	font-size: 14px;
+}
+
+.file-input .file-button{
+	display: inline-block;
+	background-color: #f1c40f;
+	padding: 10px; margin: 0 5px;
+	font-size: 14px;
+	color: #222;
+	border: none;
+	border-radius: 0;
+}
+
+.file-input .file-button:hover,
+.file-input .file-button:focus{
+	background-color: #f39c12;
+}
+
+.file-input #musics{
+	display: none;
+}
+
+.file-input .file-zone{
+	position: relative;
+	display: block;
+	margin: 15px 0; padding: 10px;
+	border: 4px dashed #f1c40f;
+	min-height: 50px;
+}
+
+.file-input .file-zone h3{
+	font-size: 14px;
+	color: #f1c40f;
+	border-color: #f1c40f!important;
+	font-weight: bold;
+}
+
+.file-input .file-zone .files{
+	padding: 15px;
+}
+
+.file-input .file-zone .files li{
+	position: relative;
+	display: block;
+	padding: 5px; margin: 0 0 5px;
+	height: 20px;
+	background-color: #333;
+	list-style: none;
+	font-size: 12px;
+	border-radius: 15px;
+	overflow: hidden;
+	color: #FFF;
+}
+
+.file-input .file-zone .files li.wait{
+	opacity: 0.5;
+}
+
+
+.file-input .file-zone .files li .progress-bar{
+	display: inline-block;
+	background-color: #2ecc71;
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	width: 0;
+}
+
+.file-input .file-zone .files li .filename{
+	display: inline-block;
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 40px;
+	padding: 0 10px;
+	font-size: 14px;
+	line-height: 30px;
+	text-shadow: 0 0 1px #000;
+}
+
+.file-input .file-zone .files li i{
+	display: inline-block;
+	position: absolute;
+	top: 0; bottom: 0;
+	right: 0;
+	width: 40px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+	background-color: rgba(0,0,0,0.3);
+}
+
+.file-input .file-zone:hover{
+	border-color: #f39c12;
+	color: #f39c12;
+	background-color: rgba(0,0,0,0.4);
+}
+
+
+/* UPLOAD */
+.up-errors .error-container{
+	border: 1px solid #e74c3c;
+	margin: 0 auto 5px;
+}
+
+.up-errors .error-container div{
+	display: block;
+	float: left;
+	font-weight: bold;
+	padding: 5px;
+	font-size: 14px;
+}
+
+.up-errors .error-container .error-title{
+	background-color: #c0392b;
+}
+
+
+#update_music{
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	background-color: rgba(0, 0, 0, 0.95);
+	padding: 100px 0;
+	text-align: center;
+}
+
+.update-musics .update-music{
+	position: relative;
+	display: inline-block;
+	margin: 0 5px 10px;
+	width: 600px;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.update-musics .update-music .poster-preview{
+	display: block;
+	float: left;
+	width: 200px;
+}
+
+.update-musics .update-music .update-fields{
+	display: block;
+	float: left;
+}
+
+.update-musics .update-music .update-fields .readonly-fields{
+	background-color: rgba(255, 255, 255, 0.10);
+	width: 400px; 
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.update-musics .update-music .update-fields .readonly-fields *{
+	display: inline-block;
+	margin: 0; padding: 5px;
+	font-size: 12px;
+}
+
+.update-musics .update-music .update-fields .readonly-fields .filename{
+	float: left;
+}
+
+.update-musics .update-music .update-fields .readonly-fields .upload-date{
+	float: right;
+}
+
+.update-musics .update-music .update-fields .update-field{
+	display: block;
+	margin: 0; padding: 0 0 0 5px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.update-musics .update-music .update-fields .update-field label{
+	float: left;
+	display: block;
+	padding: 4px 0;
+	cursor: pointer;
+	width: 70px;
+	font-size: 12px;
+}
+
+.update-musics .update-music .update-fields .update-field input{
+	float: right;
+	display: block;
+	background-color: rgba(255, 255, 255, 0.10);
+	border-radius: 0;
+	padding: 3px;
+	color: #FFF;
+	width: 290px;
+}
+
+.update-musics .update-music .message{
+	display: none;
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	background-color: rgba(0,0,0,0.8);
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0 1px 1px #000;
+	padding: 15px 0;
+}
+
+.update-musics .update-music .styles{
+	display: block;
+	margin-top: 10px; padding: 5px;
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	text-align: left;
+}
+
+.update-musics .update-music .styles h4{
+	margin: 0 auto 10px; padding: 10px;
+	font-size: 14px;
+}
+
+.update-musics .update-music .styles .style{
+	display: inline-block;
+	width: 48%;
+	margin: 3px 0;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.update-musics .update-music .styles .style input{
+	float: right;
+}
+
+.update-musics .update-music .styles .style label{
+	display: block;
+	float: left;
+	width: 88%;
+	padding: 3px;
+}
+
+
+.music-informations .left{
+	float: left;
+	margin-right: 20px;
+}
+
+.music-informations .left.music-actions *{
+	display: block;
+	margin-bottom: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.music-informations .left.music-actions img{
+	width: 200px;
+}
+
+.music-informations .left.music-actions a{
+	background-color: rgba(230, 126, 34, 0.5);
+	padding: 5px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.music-informations .left.music-actions a:hover,
+.music-informations .left.music-actions a:focus{
+	background-color: rgba(230, 126, 34, 1);
+}
+
+.music-informations .left table{
+	color: #FFF;
+	min-width: 350px;
+	font-size: 12px;
+	border-collapse: collapse;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.music-informations .left table tr td{
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	padding: 5px;
+	vertical-align: middle;
+}
+
+.music-informations .left table tr td input[type=text]{
+	background-color: rgba(255, 255, 255, 0.15);
+	width: 100%;
+	color: #FFF;
+}
+
+.music-informations .left table tr td.music-styles div{
+	background-color: rgba(255, 255, 255, 0.15);
+	margin: 3px;
+}
+
+.music-informations .left table tr td.music-styles div label{
+	display: inline-block;
+	padding: 3px;
+	width: 86%;
+}
